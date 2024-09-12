@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Compras</title>
+
+    <!-- Link para fonte externa do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importando a fonte Truculenta do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+          rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+
+    <!-- Link para o arquivo CSS local -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <nav class="menu background-preto margem-interna">
+        <div class="truculenta-100">LC</div>
+    </nav>
+
+    <section class="container">
+
+        <!-- Título da lista de compras -->
+        <h3 class="truculenta-100 titulo margem-interna">Lista de Compras</h3>
+
+        <!-- Formulário para adicionar itens à lista -->
+        <div class="centro margem-interna">
+            <label for="item" class="truculenta-100 label-input"> Item: </label>
+            <input type="text" id="item" name="item" class="caixa-texto">
+
+            <label for="valor" class="truculenta-100 label-input"> Valor: </label>
+            <input type="number" id="valor" name="valor" class="caixa-texto">
+
+            <!-- Botão para adicionar itens -->
+            <button type="button" 
+                class="truculenta-100 background-preto btn"
+                onclick="salvar()">Adicionar</button>
+        </div>
+
+        <!-- Tabela para exibir os itens da lista -->
+        <div class="margem-interna">
+            <table class="centro tabela truculenta-100">
+                <thead>
+                <tr>
+                    <th>Itens</th>
+                    <th>Valores</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <!-- Corpo da tabela (será preenchido dinamicamente com JavaScript) -->
+                <tbody id="table-body">                     
+                </tbody>
+
+                <!-- Rodapé da tabela (será preenchido dinamicamente com JavaScript) -->
+                <tfoot id="table-footer">
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <!-- Arquivo JavaScript -->
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
